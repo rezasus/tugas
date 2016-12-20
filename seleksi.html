@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Data Seleksi</title>
+</head>
+<body>
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+Pekerjaan
+<select name="job">
+<option value="mhs">Mahasiswa</option>
+<option value="tnt">Tentara</option>
+<option value="pns">Pegawai Negeri Sipil</option>
+<option value="sws">Swasta</option>
+</select>
+<br />
+<input type="submit" value="OK" />
+</form>
+<?php
+if(isset($_POST['job'])){
+echo 'Kode pekerjaan = ' . $_POST['job'];
+}
+?>
+</body>
+</html>
